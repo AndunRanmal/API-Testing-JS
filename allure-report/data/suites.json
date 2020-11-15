@@ -1,0 +1,35 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "User API service",
+    "children" : [ {
+      "name" : "get Users",
+      "uid" : "2474d5edeee01063",
+      "parentUid" : "5742291782f40995ea9b522f3239f325",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605076780661,
+        "stop" : 1605076781325,
+        "duration" : 664
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "post User",
+      "uid" : "e70c664e31f34636",
+      "parentUid" : "5742291782f40995ea9b522f3239f325",
+      "status" : "passed",
+      "time" : {
+        "start" : 1605076781327,
+        "stop" : 1605076781694,
+        "duration" : 367
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5742291782f40995ea9b522f3239f325"
+  } ]
+}
