@@ -18,6 +18,20 @@ class UsersApiService {
             console.log(err);
         }
     }
+
+    async postUser(data) {
+        try {
+            
+            let response = await axios.post(URL, data, {
+                headers: {
+                    'Authorization': TOKEN
+                }
+            });
+            return response
+        } catch (err) {
+            console.log(err);
+        }
+    }
 }
 
 export default new UsersApiService();
