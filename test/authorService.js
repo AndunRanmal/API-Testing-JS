@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import AlmService from './services/alm.service';
+import AuthorService from './services/author.service';
 
 let articleId = 16368017;
 let cookie;
@@ -12,9 +12,9 @@ let request = {
 let articleName = "Selenium-OO-Test-2020-11-20WATuWIwyxK";
 let journalId = "8096251";
 
-describe('ALM API service', () => {
+describe('AS API service', () => {
     it('Authenticate User', (done) => {
-        AlmService.authenticateApi(request)
+        AuthorService.authenticateApi(request)
             .then(data => {
                 cookie = data.headers["set-cookie"];
                 participantId = data.data.payload.participantId;
@@ -26,7 +26,7 @@ describe('ALM API service', () => {
     })
 
     it('Get article details', (done) => {
-        AlmService.getArticleDetails(articleId, cookie)
+        AuthorService.getArticleDetails(articleId, cookie)
             .then(data => {
                 expect(data.status).eql(200)
                 expect(data.data.status).to.equal("SUCCESS")
@@ -38,7 +38,7 @@ describe('ALM API service', () => {
     })
 
     it('Get relationship with article', (done) => {
-        AlmService.getRelationshipWithArticle(articleId, cookie)
+        AuthorService.getRelationshipWithArticle(articleId, cookie)
             .then(data => {
                 expect(data.status).to.equal(200);
                 let contents = data.data.content;
