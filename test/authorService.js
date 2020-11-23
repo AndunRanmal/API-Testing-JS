@@ -37,7 +37,7 @@ describe('AS API service', () => {
             .catch(err => done(err))
     })
 
-    it('Get relationship with article', (done) => {
+    it('Get relationship by article id', (done) => {
         AuthorService.getRelationshipWithArticle(articleId, cookie)
             .then(data => {
                 expect(data.status).to.equal(200);

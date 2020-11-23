@@ -3,7 +3,7 @@ import axios from 'axios';
 const AS_BASE_URL = "https://as2-wuat.aws.wiley.com";
 const PARTICIPANT_SERVICE_BASE_URL = "http://wpp-prts-wuat.aws.wiley.com:8282"
 
-class ArticleService {
+class AuthorService {
 
     async authenticateApi(data) {
         try {
@@ -46,4 +46,4 @@ class ArticleService {
         }
     }
 }
-export default new ArticleService();
+export default new AuthorService();
