@@ -5,7 +5,7 @@ describe('User API service', () => {
     it('get Users', (done) => {
         UserApiService.getUsers()
         .then(data => {
-            expect(data.data.code).eql(200)
+            expect(data.data.code).to.equal(200)
             return done()
         })
         .catch(err => done(err))
@@ -21,7 +21,7 @@ describe('User API service', () => {
         }
         UserApiService.postUser(data)
         .then(data => {
-            expect(data.data.code).eql(201)
+            expect(data.data.code).to.equal(201)
             return done()
         })
         .catch(err => done(err))

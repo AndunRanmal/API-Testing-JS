@@ -1,6 +1,7 @@
 import { expect } from 'chai';
-import AlmService from './services/wel.service';
+import AlmService from './services/alm.service';
 
+let articleId = 16368017;
 let cookie;
 let participantId;
 let request = {
@@ -25,7 +26,6 @@ describe('ALM API service', () => {
     })
 
     it('Get article details', (done) => {
-        let articleId = 16368017;
         AlmService.getArticleDetails(articleId, cookie)
             .then(data => {
                 expect(data.status).eql(200)
@@ -38,7 +38,7 @@ describe('ALM API service', () => {
     })
 
     it('Get relationship with article', (done) => {
-        AlmService.getRelationshipWithArticle(cookie)
+        AlmService.getRelationshipWithArticle(articleId, cookie)
             .then(data => {
                 expect(data.status).to.equal(200);
                 let contents = data.data.content;

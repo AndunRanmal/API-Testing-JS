@@ -32,8 +32,8 @@ class ArticleService {
         }
     }
 
-    async getRelationshipWithArticle(cookies) {
-        let url = PARTICIPANT_SERVICE_BASE_URL + "/v1/participants/relationships?entityTypeId=ArticleProduct&entityId=16368017"
+    async getRelationshipWithArticle(id, cookies) {
+        let url = PARTICIPANT_SERVICE_BASE_URL + `/v1/participants/relationships?entityTypeId=ArticleProduct&entityId=${id}`
         try {
             let response = await axios.get(url, {
                 headers: {
